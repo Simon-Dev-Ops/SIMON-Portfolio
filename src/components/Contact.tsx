@@ -28,6 +28,32 @@ const Contact = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const email = "mathebulasf@gmail.com";
+    const subject = "Portfolio Inquiry";
+    const body = "Hi Simon,\n\nI found your portfolio and would like to discuss opportunities.\n\nProject Details:\n\n\n\nBest regards,";
+    
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    try {
+      window.location.href = mailtoLink;
+    } catch (error) {
+      // Fallback: copy email to clipboard
+      navigator.clipboard.writeText(email).then(() => {
+        toast({
+          title: "Email copied to clipboard",
+          description: "Please paste mathebulasf@gmail.com into your email client",
+        });
+      }).catch(() => {
+        toast({
+          title: "Email: mathebulasf@gmail.com",
+          description: "Please copy this email address to your email client",
+        });
+      });
+    }
+  };
+
   return (
     <section id="contact" className="py-20 bg-background/50">
       <div className="container mx-auto px-4">
@@ -46,15 +72,21 @@ const Contact = () => {
             <Card className="p-6 bg-card border-border">
               <h3 className="text-2xl font-semibold mb-6 text-foreground">Let's Talk</h3>
               <div className="space-y-4">
-                <div className="flex items-center gap-4 p-4 bg-background/50 rounded-lg border border-border">
-                  <div className="p-3 bg-primary/10 rounded-lg text-primary">
+                <a
+                  href="mailto:mathebulasf@gmail.com?subject=Portfolio%20Inquiry"
+                  onClick={handleEmailClick}
+                  className="flex items-center gap-4 p-4 bg-background/50 rounded-lg border border-border hover:border-primary transition-colors group cursor-pointer"
+                  title="Send email to mathebulasf@gmail.com"
+                  aria-label="Send email to mathebulasf@gmail.com"
+                >
+                  <div className="p-3 bg-primary/10 rounded-lg text-primary group-hover:scale-110 transition-transform">
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="font-medium text-foreground">mathebulasf@gmail.com</p>
+                    <p className="font-medium text-foreground group-hover:text-primary transition-colors">mathebulasf@gmail.com</p>
                   </div>
-                </div>
+                </a>
                 <div className="flex items-center gap-4 p-4 bg-background/50 rounded-lg border border-border">
                   <div className="p-3 bg-primary/10 rounded-lg text-primary">
                     <MapPin className="h-5 w-5" />
@@ -107,7 +139,10 @@ const Contact = () => {
               <div className="space-y-4">
                 <a
                   href="mailto:mathebulasf@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Simon,%0D%0A%0D%0AI%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20opportunities.%0D%0A%0D%0AProject%20Details:%0D%0A%0D%0A%0D%0A%0D%0ABest%20regards,"
-                  className="inline-flex items-center justify-center w-full bg-gradient-accent text-primary-foreground hover:opacity-90 group px-6 py-3 rounded-lg font-medium transition-all duration-300"
+                  onClick={handleEmailClick}
+                  className="inline-flex items-center justify-center w-full bg-gradient-accent text-primary-foreground hover:opacity-90 group px-6 py-3 rounded-lg font-medium transition-all duration-300 cursor-pointer"
+                  title="Open email client to send message"
+                  aria-label="Send email to Simon Mathebula"
                 >
                   <Send className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   Send Email
