@@ -7,37 +7,37 @@ const SREPrinciples = () => {
       icon: Shield,
       title: "High Availability & Reliability",
       description: "Designing systems for 99.9%+ uptime with fault-tolerant architectures",
-      color: "text-cyan-400",
+      color: "text-violet-400",
     },
     {
       icon: Zap,
       title: "Incident Management & Response",
       description: "24/7 on-call support with rapid incident detection and resolution",
-      color: "text-blue-400",
+      color: "text-cyan-400",
     },
     {
       icon: TrendingUp,
       title: "Performance Tuning & Optimization",
       description: "Continuous improvement of system performance and resource efficiency",
-      color: "text-emerald-400",
+      color: "text-emerald-500",
     },
     {
       icon: Bell,
       title: "Proactive Monitoring & Alerting",
       description: "Real-time dashboards and intelligent alerting for early issue detection",
-      color: "text-purple-400",
+      color: "text-purple-500",
     },
     {
       icon: Database,
       title: "Capacity Planning",
       description: "Data-driven forecasting and scaling strategies for future growth",
-      color: "text-orange-400",
+      color: "text-orange-500",
     },
     {
       icon: RefreshCw,
       title: "Disaster Recovery Planning",
       description: "Comprehensive backup strategies and tested recovery procedures",
-      color: "text-pink-400",
+      color: "text-pink-500",
     },
   ];
 

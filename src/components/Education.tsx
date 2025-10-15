@@ -48,7 +48,7 @@ const Education = () => {
       institution: "Technical Institution",
       degree: "Diploma in Computer Engineering",
       year: "2012-2014 - Misplaced",
-      color: "text-blue-400",
+      color: "text-indigo-400",
       type: "Diploma Qualification"
     },
     {
@@ -64,7 +64,7 @@ const Education = () => {
       institution: "Various Institutions",
       degree: "IT Technical Support NQF Level 4",
       year: "2013 - Valid",
-      color: "text-emerald-400",
+      color: "text-teal-400",
       type: "Technical Qualification"
     },
     {
@@ -72,7 +72,7 @@ const Education = () => {
       institution: "Magabotse Secondary School",
       degree: "Grade 12 (Matric)",
       year: "2011 - Completed",
-      color: "text-blue-400",
+      color: "text-amber-400",
       type: "Secondary Education"
     },
   ];
