@@ -1,4 +1,4 @@
-import { GraduationCap, Award, FileText, Zap, Shield, BookOpen } from "lucide-react";
+import { GraduationCap, Award, FileText, Zap, Shield, BookOpen, BarChart3 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const Education = () => {
@@ -10,6 +10,14 @@ const Education = () => {
       year: "2023 - Valid",
       color: "text-cyan-400",
       type: "Professional Certification"
+    },
+    {
+      icon: BarChart3,
+      institution: "New Relic",
+      degree: "New Relic Observability Foundations Badge",
+      year: "Feb 2024 - Feb 2026",
+      color: "text-green-400",
+      type: "Observability Certification"
     },
     {
       icon: Zap,
