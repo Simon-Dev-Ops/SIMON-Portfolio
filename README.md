@@ -10,13 +10,13 @@ This portfolio showcases my skills, experience, and projects as a software devel
 
 This project is built with:
 
-- **Vite** - Fast build tool and development server
-- **TypeScript** - Type-safe JavaScript
-- **React** - Modern UI library
-- **shadcn/ui** - Beautiful, accessible UI components
-- **Tailwind CSS** - Utility-first CSS framework
-- **React Router** - Client-side routing
-- **Lucide React** - Beautiful icons
+- Vite - Fast build tool and development server
+- TypeScript
+- React - Modern UI library
+- shadcn/ui - accessible UI components
+- Tailwind CSS
+- React Router - Client-side routing
+- Lucide React - Beautiful icons
 
 ## Getting Started
 
