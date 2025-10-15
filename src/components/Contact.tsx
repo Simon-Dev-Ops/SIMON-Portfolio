@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Linkedin, Github, Send } from "lucide-react";
+import { Mail, Linkedin, Github, Send, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -46,43 +46,31 @@ const Contact = () => {
             <Card className="p-6 bg-card border-border">
               <h3 className="text-2xl font-semibold mb-6 text-foreground">Let's Talk</h3>
               <div className="space-y-4">
-                <a
-                  href="mailto:mathebulasf@gmail.com"
-                  className="flex items-center gap-4 p-4 bg-background/50 rounded-lg border border-border hover:border-primary transition-colors group"
-                >
-                  <div className="p-3 bg-primary/10 rounded-lg text-primary group-hover:scale-110 transition-transform">
+                <div className="flex items-center gap-4 p-4 bg-background/50 rounded-lg border border-border">
+                  <div className="p-3 bg-primary/10 rounded-lg text-primary">
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
                     <p className="font-medium text-foreground">mathebulasf@gmail.com</p>
                   </div>
-                </a>
+                </div>
                 <div className="flex items-center gap-4 p-4 bg-background/50 rounded-lg border border-border">
                   <div className="p-3 bg-primary/10 rounded-lg text-primary">
-                    <Mail className="h-5 w-5" />
+                    <MapPin className="h-5 w-5" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="font-medium text-foreground">Johannesburg, South Africa</p>
+                    <div className="font-medium text-foreground">
+                      <p>Area: Fourways</p>
+                      <p>Suburb: Dainfern</p>
+                      <p>City: Johannesburg</p>
+                      <p>Country: South Africa</p>
+                    </div>
                   </div>
                 </div>
                 <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-4 p-4 bg-background/50 rounded-lg border border-border hover:border-primary transition-colors group"
-                >
-                  <div className="p-3 bg-primary/10 rounded-lg text-primary group-hover:scale-110 transition-transform">
-                    <Linkedin className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">LinkedIn</p>
-                    <p className="font-medium text-foreground">Connect with me</p>
-                  </div>
-                </a>
-                <a
-                  href="https://github.com"
+                  href="https://github.com/Simon-Dev-Ops"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 bg-background/50 rounded-lg border border-border hover:border-primary transition-colors group"
@@ -108,73 +96,34 @@ const Contact = () => {
 
           {/* Contact Form */}
           <Card className="p-6 bg-card border-border animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="text-center space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                  Name
-                </label>
-                <Input
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="bg-background border-border focus:border-primary"
-                  placeholder="Your name"
-                />
+                <h3 className="text-2xl font-semibold mb-4 text-foreground">Let's Connect</h3>
+                <p className="text-muted-foreground mb-6">
+                  Ready to discuss your next project? I'm always interested in new opportunities and challenges.
+                </p>
               </div>
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                  Email
-                </label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="bg-background border-border focus:border-primary"
-                  placeholder="your.email@example.com"
-                />
+              
+              <div className="space-y-4">
+                <a
+                  href="mailto:mathebulasf@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Simon,%0D%0A%0D%0AI%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20opportunities.%0D%0A%0D%0AProject%20Details:%0D%0A%0D%0A%0D%0A%0D%0ABest%20regards,"
+                  className="inline-flex items-center justify-center w-full bg-gradient-accent text-primary-foreground hover:opacity-90 group px-6 py-3 rounded-lg font-medium transition-all duration-300"
+                >
+                  <Send className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  Send Email
+                </a>
+                
+                <a
+                  href="https://www.linkedin.com/in/simon-mathebula-445614b2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-full border border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-300"
+                >
+                  <Linkedin className="mr-2 h-5 w-5" />
+                  Connect on LinkedIn
+                </a>
               </div>
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                  Subject
-                </label>
-                <Input
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="bg-background border-border focus:border-primary"
-                  placeholder="What's this about?"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                  Message
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  className="bg-background border-border focus:border-primary resize-none"
-                  placeholder="Tell me about your project or question..."
-                />
-              </div>
-              <Button
-                type="submit"
-                className="w-full bg-gradient-accent text-primary-foreground hover:opacity-90 group"
-              >
-                <Send className="mr-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                Send Message
-              </Button>
-            </form>
+            </div>
           </Card>
         </div>
       </div>

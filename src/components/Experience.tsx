@@ -4,36 +4,46 @@ import { Card } from "@/components/ui/card";
 const Experience = () => {
   const experiences = [
     {
-      company: "Rank Interactive",
+      company: "Rank Interactive / Rank Group",
       period: "Jan 2024 - Present",
       title: "Site Reliability Engineer",
       location: "Johannesburg, South Africa",
       achievements: [
-        "Built comprehensive SLI/SLO dashboards in New Relic for real-time performance insights",
-        "Automated infrastructure provisioning with Terraform and GitHub Actions",
+        "Developed and managed platform and integration frameworks with a focus on reliability and scalability",
+        "Built comprehensive SLI/SLO dashboards in New Relic for real-time performance insights and faster bottleneck identification",
+        "Automated infrastructure provisioning with Terraform and GitHub Actions, reducing manual intervention",
         "Implemented automated New Relic agent upgrades across all environments using Ansible",
+        "Enhanced system reliability and performance through proactive monitoring and automation",
       ],
     },
     {
-      company: "Absa Bank",
+      company: "Absa Bank Limited",
       period: "Mar 2020 - Dec 2023",
       title: "DevOps Engineer",
       location: "Johannesburg, South Africa",
       achievements: [
-        "Provided 24/7 support for critical trading platform and Order Management systems",
-        "Designed and implemented CI/CD pipelines for EKS/ECS containerized applications",
-        "Deployed comprehensive monitoring solutions using Prometheus and Grafana",
+        "Provided 24/7 support for critical Order Management and Trading applications used by Portfolio Managers and Traders",
+        "Ensured seamless operation of trading support applications connecting front-office with back-office processes",
+        "Designed and implemented CI/CD pipelines for EKS/ECS containerized applications on AWS",
+        "Managed change controls for upgrades and modifications, ensuring 24/7 application uptime",
+        "Analyzed Unix scripts and managed job scheduling using cron and Autosys",
+        "Led weekly client calls to review issues and identify preventive measures",
+        "Developed project plans for annual recertification of managed applications",
       ],
     },
     {
       company: "Vodacom",
-      period: "Jul 2018 - Feb 2020",
-      title: "DevOps/Support Engineer",
+      period: "Jul 2018 - Mar 2020",
+      title: "2nd Line Support / RPA - DevOps Engineer",
       location: "Johannesburg, South Africa",
       achievements: [
-        "Deployed and maintained ToBi chatbot on Kubernetes infrastructure",
-        "Implemented RPA automation to streamline operational workflows",
-        "Established GitLab CI/CD pipelines for automated testing and deployment",
+        "Deployed and maintained ToBi chatbot in a Kubernetes environment, creating Kubernetes pods",
+        "Implemented RPA automation using UiPath for process analysis, design, and implementation",
+        "Built end-to-end CI/CD pipelines for ECS-based applications, integrating GitLab CI/CD and Jenkins",
+        "Provided front-end support for knowledge base website (tradekbs.vodacom.co.za)",
+        "Monitored applications using Elasticsearch and ensured system stability after deployments",
+        "Automated infrastructure provisioning for ECS clusters using Terraform",
+        "Conducted vulnerability system scans and risk mitigation procedures",
       ],
     },
     {
@@ -42,9 +52,24 @@ const Experience = () => {
       title: "Support Engineer",
       location: "Johannesburg, South Africa",
       achievements: [
-        "Optimized application performance and resolved critical incidents",
-        "Managed SLA compliance and system administration tasks",
-        "Provided technical support for enterprise applications",
+        "Analyzed software application functionality to identify and suggest enhancements",
+        "Optimized application performance and resolved critical incidents within SLA",
+        "Managed system administration tasks including user configuration and password resets",
+        "Provided technical support for enterprise applications and maintained documentation",
+        "Collaborated with cross-functional teams to ensure smooth operations",
+      ],
+    },
+    {
+      company: "Bytes Managed Solutions",
+      period: "Mar 2015 - Mar 2016",
+      title: "Customer Service Representative (Field Technician - ATM/TCR)",
+      location: "South Africa",
+      achievements: [
+        "Managed and maintained adequate boot stock for operational efficiency",
+        "Addressed customer inquiries and issues within stipulated Service Level Agreements (SLAs)",
+        "Conducted site inspections prior to ATM installations, ensuring compliance",
+        "Performed installations of cash vault machines, software upgrades, and network configurations",
+        "Provided maintenance and troubleshooting for Dell equipment ensuring optimal performance",
       ],
     },
   ];
@@ -57,7 +82,7 @@ const Experience = () => {
             Professional Experience
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            8+ years of building and maintaining reliable, scalable infrastructure
+            9+ years of building and maintaining reliable, scalable infrastructure
           </p>
         </div>
 

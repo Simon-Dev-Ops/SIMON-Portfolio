@@ -18,7 +18,7 @@ const Hero = () => {
       {/* Geometric Patterns */}
       <div className="absolute inset-0 z-0 opacity-10">
         <div className="absolute top-20 left-10 w-64 h-64 border border-primary rounded-full animate-glow-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 border border-primary rounded-full animate-glow-pulse" style={{ animationDelay: "1s" }} />
+        <div className="absolute bottom-20 right-10 w-96 h-96 border border-primary rounded-full animate-glow-pulse" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -35,25 +35,25 @@ const Hero = () => {
             Simon Mathebula
           </h1>
 
-          <div className="flex flex-wrap justify-center gap-2 mb-6 text-sm md:text-base font-mono text-muted-foreground animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
+          <div className="flex flex-wrap justify-center gap-2 mb-6 text-sm md:text-base font-mono text-muted-foreground animate-fade-in-up">
             <span className="px-3 py-1 bg-card border border-border rounded-full">Site Reliability Engineer</span>
             <span className="px-3 py-1 bg-card border border-border rounded-full">DevOps Engineer</span>
             <span className="px-3 py-1 bg-card border border-border rounded-full">Cloud Enthusiast</span>
           </div>
 
-          <p className="text-lg md:text-xl text-primary mb-4 font-semibold animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
-            8+ years building resilient systems, automating infrastructure, and ensuring 24/7 uptime
+          <p className="text-lg md:text-xl text-primary mb-4 font-semibold animate-fade-in-up">
+            9+ years building resilient systems, automating infrastructure, and ensuring 24/7 uptime
           </p>
 
-          <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.4s" }}>
+          <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed animate-fade-in-up">
             Currently optimizing reliability and performance at Rank Interactive, with a proven track record at Absa Bank and Vodacom. 
             Passionate about Infrastructure as Code, CI/CD automation, and proactive monitoring.
           </p>
 
           {/* Animated Metrics */}
-          <div className="flex flex-wrap justify-center gap-8 mb-8 animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
+          <div className="flex flex-wrap justify-center gap-8 mb-8 animate-fade-in-up">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">8+</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">9+</div>
               <div className="text-sm text-muted-foreground">Years Experience</div>
             </div>
             <div className="text-center">
@@ -66,36 +66,46 @@ const Hero = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in-up" style={{ animationDelay: "0.6s" }}>
-            <Button className="bg-gradient-accent text-primary-foreground hover:opacity-90 group">
+          <div className="flex flex-wrap justify-center gap-4 mb-8 animate-fade-in-up">
+            <a
+              href="/Simon_Mathebula_Resume.pdf"
+              download="Simon_Mathebula_Resume.pdf"
+              className="inline-flex items-center justify-center px-6 py-3 bg-gradient-accent text-primary-foreground hover:opacity-90 rounded-lg font-medium transition-all duration-300 group"
+            >
               <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
               Download Resume
-            </Button>
+            </a>
             <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
               View Projects
             </Button>
           </div>
 
-          <div className="flex justify-center gap-6 animate-fade-in-up" style={{ animationDelay: "0.8s" }}>
+          <div className="flex justify-center gap-6 animate-fade-in-up">
             <a
-              href="https://github.com"
+              href="https://github.com/Simon-Dev-Ops"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="GitHub Profile"
+              title="Visit my GitHub profile"
             >
               <Github className="h-6 w-6" />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/simon-mathebula-445614b2"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
+              aria-label="LinkedIn Profile"
+              title="Connect with me on LinkedIn"
             >
               <Linkedin className="h-6 w-6" />
             </a>
             <a
-              href="mailto:mathebulasf@gmail.com"
+              href="mailto:mathebulasf@gmail.com?subject=Portfolio%20Inquiry"
               className="text-muted-foreground hover:text-primary transition-colors"
+              title="Send email to mathebulasf@gmail.com"
+              aria-label="Send Email"
             >
               <Mail className="h-6 w-6" />
             </a>

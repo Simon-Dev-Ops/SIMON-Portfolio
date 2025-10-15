@@ -1,4 +1,4 @@
-import { Code, Cloud, Cog, LineChart, GitBranch, Users } from "lucide-react";
+import { Code, Cloud, Cog, LineChart, GitBranch, Users, Zap, Database, Shield, Wrench, Search } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const Skills = () => {
@@ -6,56 +6,80 @@ const Skills = () => {
     {
       icon: Cloud,
       title: "Cloud Platforms",
-      skills: ["Microsoft Azure", "AWS"],
+      skills: ["Microsoft Azure", "AWS (EC2, S3, RDS, CodeDeploy, CloudWatch, IAM)", "Azure SQL Database"],
       color: "text-blue-400",
     },
     {
       icon: Cog,
       title: "DevOps & CI/CD",
-      skills: ["Azure DevOps", "Jenkins", "GitLab CI/CD", "GitHub Actions"],
+      skills: ["Azure DevOps", "Jenkins", "GitLab CI/CD", "GitHub Actions", "Azure Pipelines"],
       color: "text-cyan-400",
     },
     {
       icon: Code,
       title: "Infrastructure as Code",
-      skills: ["Terraform", "Ansible"],
+      skills: ["Terraform", "Ansible", "ARM Templates", "Automated Provisioning"],
       color: "text-emerald-400",
     },
     {
       icon: Cog,
       title: "Container Orchestration",
-      skills: ["Kubernetes", "Docker", "EKS", "ECS"],
+      skills: ["Kubernetes", "Docker", "Amazon EKS", "Docker Compose", "Container Registry"],
       color: "text-purple-400",
     },
     {
       icon: LineChart,
       title: "Monitoring & Observability",
-      skills: ["New Relic", "Prometheus", "Grafana", "Elastic Search", "Nagios"],
+      skills: ["New Relic", "Prometheus", "Grafana", "Elasticsearch", "Nagios", "Log Analytics"],
       color: "text-orange-400",
+    },
+    {
+      icon: Search,
+      title: "Code Quality & Security",
+      skills: ["SonarQube", "Static Code Analysis", "Vulnerability Assessment", "Security Scanning"],
+      color: "text-green-400",
+    },
+    {
+      icon: Zap,
+      title: "Process Automation",
+      skills: ["UiPath RPA", "Business Process Automation", "Workflow Optimization", "Digital Transformation"],
+      color: "text-yellow-400",
     },
     {
       icon: Code,
       title: "Programming & Scripting",
-      skills: ["Python", "Bash/Shell", "C#"],
+      skills: ["Python", "Bash/Shell Scripting", "C#", "PowerShell", "YAML", "JSON"],
       color: "text-pink-400",
     },
     {
-      icon: Cog,
-      title: "Databases",
-      skills: ["SQL Server", "Azure SQL", "MongoDB", "Oracle", "PostgreSQL"],
+      icon: Database,
+      title: "Database Management",
+      skills: ["SQL Server", "Azure SQL Database", "Oracle", "PostgreSQL", "Amazon RDS"],
       color: "text-cyan-400",
     },
     {
       icon: Users,
-      title: "Ticketing & Collaboration",
-      skills: ["Jira", "ServiceNow", "Remedy", "Confluence"],
+      title: "IT Service Management",
+      skills: ["Jira", "ServiceNow", "BMC Remedy", "Confluence", "Change Management"],
       color: "text-blue-400",
     },
     {
-      icon: Code,
-      title: "API Testing",
-      skills: ["SoapUI", "Postman"],
+      icon: GitBranch,
+      title: "Version Control & APIs",
+      skills: ["Git", "GitHub", "Postman", "SoapUI", "REST APIs"],
       color: "text-emerald-400",
+    },
+    {
+      icon: Shield,
+      title: "Security & Compliance",
+      skills: ["Security Scanning", "Risk Assessment", "Compliance Frameworks", "Access Control"],
+      color: "text-red-400",
+    },
+    {
+      icon: Wrench,
+      title: "System Administration",
+      skills: ["Windows/Linux Servers", "User Management", "SSH/Telnet", "FTP/SFTP", "Performance Tuning"],
+      color: "text-indigo-400",
     },
   ];
 

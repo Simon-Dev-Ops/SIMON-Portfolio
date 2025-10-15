@@ -1,4 +1,4 @@
-import { GraduationCap, Award } from "lucide-react";
+import { GraduationCap, Award, FileText, Zap, Shield, BookOpen } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const Education = () => {
@@ -6,16 +6,66 @@ const Education = () => {
     {
       icon: Award,
       institution: "Henley Business School",
-      degree: "Certificate in Business Management Practice",
-      year: "Professional Development",
+      degree: "Higher Certificate in Management Practice (HCMP)",
+      year: "2023 - Valid",
       color: "text-cyan-400",
+      type: "Professional Certification"
+    },
+    {
+      icon: Zap,
+      institution: "UiPath Academy",
+      degree: "RPA Developer L3, RPA Orchestrator Level 2, RPA Awareness",
+      year: "2018 & 2019 - Valid",
+      color: "text-purple-400",
+      type: "RPA Certification"
+    },
+    {
+      icon: Shield,
+      institution: "CompTIA",
+      degree: "CompTIA A+",
+      year: "2015 - Expired",
+      color: "text-orange-400",
+      type: "IT Certification"
+    },
+    {
+      icon: FileText,
+      institution: "Microsoft",
+      degree: "MCSA (Microsoft Certified Solutions Associate)",
+      year: "2014 - Expired",
+      color: "text-blue-400",
+      type: "Microsoft Certification"
+    },
+    {
+      icon: GraduationCap,
+      institution: "Technical Institution",
+      degree: "Diploma in Computer Engineering",
+      year: "2012-2014 - Misplaced",
+      color: "text-blue-400",
+      type: "Diploma Qualification"
+    },
+    {
+      icon: BookOpen,
+      institution: "Various Institutions",
+      degree: "IT Systems Support NQF Level 5",
+      year: "2013 - Valid",
+      color: "text-emerald-400",
+      type: "Technical Qualification"
+    },
+    {
+      icon: BookOpen,
+      institution: "Various Institutions",
+      degree: "IT Technical Support NQF Level 4",
+      year: "2013 - Valid",
+      color: "text-emerald-400",
+      type: "Technical Qualification"
     },
     {
       icon: GraduationCap,
       institution: "Magabotse Secondary School",
       degree: "Grade 12 (Matric)",
-      year: "Secondary Education",
+      year: "2011 - Completed",
       color: "text-blue-400",
+      type: "Secondary Education"
     },
   ];
 
@@ -31,10 +81,10 @@ const Education = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {education.map((edu, index) => (
             <Card
-              key={edu.institution}
+              key={`${edu.institution}-${edu.degree}`}
               className="p-6 bg-card border-border hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 group animate-fade-in-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
@@ -48,9 +98,12 @@ const Education = () => {
                 <p className="text-sm text-primary font-medium mb-1">
                   {edu.institution}
                 </p>
-                <p className="text-xs text-muted-foreground">
+                <p className="text-xs text-muted-foreground mb-2">
                   {edu.year}
                 </p>
+                <span className="text-xs px-2 py-1 bg-primary/10 text-primary rounded-full">
+                  {edu.type}
+                </span>
               </div>
             </Card>
           ))}
